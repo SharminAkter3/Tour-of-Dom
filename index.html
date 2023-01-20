@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fruits-container li {
+            color: brown;
+        }
+
+        #fruits-title {
+            color: black;
+        }
+
+        .sms {
+            color: violet;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+    </header>
+    <main id="main-container">
+        <section id="family-member">
+            <h1>My awesome dom with first lecture </h1>
+            <ul id="member-list">
+                <li>Sharmin</li>
+                <li>Shila</li>
+                <li>Noyon</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">Fruits i like</h1>
+            <ul class="fruits-container">
+                <li>Mango</li>
+                <li>Apple</li>
+                <li>Banana</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="">Start conversation</h1>
+            <ul>
+                <li class="sms">hi</li>
+                <li class="sms">hlw</li>
+                <li class="sms">hey</li>
+            </ul>
+        </section>
+    </main>
+    <script src="dom.js"></script>
+    <script src="append.js"></script>
+    <script src="styleIn.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName("li");
+        // console.log(liCollection);
+        for (const li of liCollection) {
+            // console.log(li.innerText);
+        }
+        const h1Element = document.getElementsByTagName("h1");
+        for (const h1 of h1Element) {
+            // console.log(h1.innerText);
+        }
+        const element = document.getElementsByClassName("sms");
+        for (const sms of element) {
+            console.log(sms.innerText);
+        }
+    </script>
+</body>
+
+</html>
